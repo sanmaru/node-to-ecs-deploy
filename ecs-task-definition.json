@@ -1,0 +1,11 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "ec2-node-to-ecs-deploy-service",
+      "image": "852052221713.dkr.ecr.ap-northeast-2.amazonaws.com/node-to-ecs-deploy",
+      "memory": 128,
+      "cpu": 1,
+      "essential": true
+    }
+  ]
+}
