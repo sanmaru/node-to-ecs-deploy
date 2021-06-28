@@ -9,7 +9,7 @@ const HOST = "0.0.0.0"
 // App
 const app = express()
 app.get("/", (req, res) => {
-  res.send(`Hello ECS World2 - ${new Date().toISOString()}`)
+  res.send(`Hello ECS World Test - ${new Date().toISOString()}`)
 })
 
 app.listen(PORT, HOST)
