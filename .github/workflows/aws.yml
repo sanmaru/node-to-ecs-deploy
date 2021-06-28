@@ -84,6 +84,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.render-web-container.outputs.task-definition }}
-        service: ecs-cluster
-        cluster: default
+        #service: ecs-cluster
+        cluster: ecs-cluster
         wait-for-service-stability: true
