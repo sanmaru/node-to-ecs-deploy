@@ -71,18 +71,19 @@ jobs:
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:latest"
 
     - name: Fill in the new image ID in the Amazon ECS task definition
-      id: task-def
+      #id: task-def
+      id: render-web-container
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        # task-definition: task-definition.json
-        task-definition: ecs-task-definition.json
-        #container-name: ecs-ecsTask-3-ecsContainer-faa9eaa49a8f919bf401
+        task-definition: task-definition.json
+        # task-definition: ecs-task-definition.json
+        container-name: ecsContainer
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
-        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        task-definition: ${{ steps.render-web-container.outputs.task-definition }}
         service: ecs-cluster
         cluster: default
         wait-for-service-stability: true
