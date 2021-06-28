@@ -86,4 +86,4 @@ jobs:
         task-definition: ${{ steps.render-web-container.outputs.task-definition }}
         #service: ecs-cluster
         cluster: ecs-cluster
-        wait-for-service-stability: true
+        #wait-for-service-stability: true
