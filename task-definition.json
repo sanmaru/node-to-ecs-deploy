@@ -56,7 +56,7 @@
     "EXTERNAL",
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:852052221713:task-definition/ecsTask:3",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:852052221713:task-definition/ecsTask:5",
   "family": "ecsTask",
   "requiresAttributes": [
     {
@@ -72,7 +72,7 @@
   ],
   "networkMode": null,
   "cpu": null,
-  "revision": 3,
+  "revision": 5,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
