@@ -15,5 +15,6 @@
       ]
     }
   ],
-  "family": "ecsTask"
+  "family": "ecsTask",
+  "executionRoleArn": "arn:aws:iam::852052221713:role/ecsTaskExecutionRole"
 }
