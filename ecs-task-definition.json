@@ -5,7 +5,14 @@
       "image": "852052221713.dkr.ecr.ap-northeast-2.amazonaws.com/node-to-ecs-deploy:latest",
       "memory": 128,
       "cpu": 1,
-      "essential": true
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 8080
+        }
+      ]
     }
   ],
   "family": "ecsTask"
