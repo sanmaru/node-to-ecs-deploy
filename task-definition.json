@@ -53,10 +53,9 @@
   "memory": "128",
   "taskRoleArn": null,
   "compatibilities": [
-    "EXTERNAL",
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:852052221713:task-definition/ecsTask:5",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:852052221713:task-definition/ecsTask:15",
   "family": "ecsTask",
   "requiresAttributes": [
     {
