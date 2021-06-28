@@ -76,13 +76,13 @@ jobs:
       with:
         # task-definition: task-definition.json
         task-definition: ecs-task-definition.json
-        container-name: node-to-esc
+        container-name: NodeWebContainer
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: ec2-node-to-ecs-deploy-service
+        service: sample-ecsService
         cluster: default
         wait-for-service-stability: true
