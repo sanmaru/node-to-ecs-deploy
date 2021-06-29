@@ -26,4 +26,5 @@ jobs:
     - name: task-run
       id: task-run
       run: |
+        aws ecs top-task --task-definition ecsTask
         aws ecs run-task --cluster ecs-cluster --task-definition ecsTask
