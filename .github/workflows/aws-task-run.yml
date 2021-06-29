@@ -26,5 +26,4 @@ jobs:
     - name: task-run
       id: task-run
       run: |
-        aws
         aws ecs run-task --cluster ecs-cluster --task-definition ecsTask:17
