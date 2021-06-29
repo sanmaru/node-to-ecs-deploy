@@ -91,4 +91,5 @@ jobs:
     - name: task-run
       id: task-run
       run: |
-        aws ecs run-task --cluster default --task-definition ecsTask
+        aws
+        aws ecs run-task --cluster ecs-cluster --task-definition ecsTask:17
