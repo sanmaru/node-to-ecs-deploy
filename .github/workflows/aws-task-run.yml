@@ -26,5 +26,5 @@ jobs:
     - name: task-run
       id: task-run
       run: |
-        aws ecs stop-task --cluster ecs-cluster
+        aws ecs stop-task --task d9d3ecf9289f4a49827c258a90a9103a --cluster ecs-cluster
         aws ecs run-task --cluster ecs-cluster --task-definition ecsTask
