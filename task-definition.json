@@ -29,7 +29,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "852052221713.dkr.ecr.ap-northeast-2.amazonaws.com/node-to-ecs-deploy:latest",
+      "image": "852052221713.dkr.ecr.ap-northeast-2.amazonaws.com/node-to-ecs-deploy",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -55,7 +55,7 @@
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:852052221713:task-definition/ecsTask:15",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:852052221713:task-definition/ecsTask",
   "family": "ecsTask",
   "requiresAttributes": [
     {
