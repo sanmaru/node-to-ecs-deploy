@@ -87,3 +87,9 @@ jobs:
         #service: ecs-cluster
         cluster: ecs-cluster
         #wait-for-service-stability: true
+        
+    - name: task-run
+      id: task-run
+      run: |
+        aws
+        aws ecs run-task --cluster ecs-cluster --task-definition ecsTask:17

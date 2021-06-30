@@ -1,0 +1,30 @@
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+
+name: Task Run
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # 수정 필요
+        aws-region: ap-northeast-2
+        
+    - name: task-run
+      id: task-run
+      run: |
+        aws ecs stop-task --task-definition ecsTask
+        aws ecs run-task --cluster ecs-cluster --task-definition ecsTask
